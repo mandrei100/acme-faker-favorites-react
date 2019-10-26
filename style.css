@@ -1,0 +1,25 @@
+.cards {
+    
+    color: black;
+
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+li {
+    margin-bottom: 10px;
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+}
+
+ .active {
+    margin-bottom: 10px;
+    background-color: tomato;
+    padding: 10px;
+}

@@ -15,17 +15,32 @@ function loopThrough() {
 loopThrough();
 // console.log(userArray);
 
+let favoriteArray = [];
+
+function getEvent(e){
+    console.log(e.target);
+    if (e.target.classList.contains('active')){
+        e.target.classList.remove('active')
+    } else {
+        e.target.classList.add('active')
+    }
+    
+    favoriteArray.push(e);
+}
+
+
 class Favorites extends React.Component {
     render() {
         console.log(userArray);
+        this.favoriteArray = this.setState.favoriteArray;
         return (
-            <div>
             <ul>
+                <p>Count {favoriteArray.length} Something</p>
                 {userArray.map((element, idx) => {
-                    return <li id={idx} key={idx}>{element.name}<br></br>{element.email}</li>
+                    return <li id={idx} key={idx} onClick={getEvent}>{element.name}<br></br>{element.email}</li>
                 })}
             </ul>
-            </div>
+           
         )
     }
 }
